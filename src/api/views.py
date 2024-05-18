@@ -1,4 +1,4 @@
-from typing import List
+from typing import Dict
 from fastapi import APIRouter
 from pydantic import BaseModel
 
@@ -13,13 +13,8 @@ class TextObject(BaseModel):
     text: str
 
 
-class EncoderResponse(BaseModel):
-    encoded_text: str
-    original_words: List[str]
-
-
-@router.post("/encode", response_model=EncoderResponse)
+@router.post("/encode", response_model=Dict[str, str])
 def encode(text_instance: TextObject):
     encoder = Encoder(text_instance.text)
-    encoded_text, original_words = encoder.to_weird_text()
-    return {"encoded_text": encoded_text, "original_words": original_words}
+    encoded_text = encoder.to_weird_text()
+    return {"text": encoded_text}
