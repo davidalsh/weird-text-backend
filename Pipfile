@@ -11,6 +11,8 @@ pydantic = "*"
 mypy = "*"
 starlette = "*"
 gunicorn = "*"
+httpx = "*"
+pytest = "*"
 
 [dev-packages]
 
