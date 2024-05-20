@@ -12,7 +12,7 @@ app.add_middleware(
     CORSMiddleware,
     allow_origins=[
         "http://localhost:5173",
-        "https://weird-text-frontend.vercel.app/",
+        "https://weird-text-frontend-939ba918f5ec.herokuapp.com/",
     ],
     allow_credentials=True,
     allow_methods=["*"],
