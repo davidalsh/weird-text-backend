@@ -21,7 +21,7 @@ pipenv install
 ## Running
 
 ```bash
-fastapi run src/main
+fastapi dev src/main.py
 ```
 
 ## Docs
