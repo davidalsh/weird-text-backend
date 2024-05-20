@@ -1,0 +1,93 @@
+{
+	"info": {
+		"_postman_id": "d6d28fb0-30e9-4a9c-aea5-4fcd2419830e",
+		"name": "weirdtext",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32374398"
+	},
+	"item": [
+		{
+			"name": "encode",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"text\": \"This is a long looong test sentence,\\nwith some big (biiiiig) words!\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/api/v1/encode",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"encode"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "decode",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"text\": \"\\n—weird—\\nTihs is a lnog lnooog tset stcennee,\\nwtih smoe big (biiiiig) wdros!\\n—weird—\\nThis long looong sentence some test with words\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/api/v1/decode",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"decode"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "127.0.0.1:8000",
+			"type": "string"
+		}
+	]
+}

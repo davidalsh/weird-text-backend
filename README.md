@@ -23,3 +23,10 @@ pipenv install
 fastapi run dev
 ```
 
+## Docs
+Check api documentation
+
+```bash
+http://0.0.0.0:8000/docs
+```
+
