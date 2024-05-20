@@ -14,13 +14,14 @@ pip3 install -r requirements.txt
 or
 ```bash
 pip3 install pipenv
+pipenv shell
 pipenv install
 ```
 
 ## Running
 
 ```bash
-fastapi run dev
+fastapi run src/main
 ```
 
 ## Docs
