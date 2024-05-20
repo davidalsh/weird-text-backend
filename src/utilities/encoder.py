@@ -27,7 +27,7 @@ class Encoder(WeirdTextHandler):
         """Adds a separator around the encoded text and adds
         changed words at the end of the text.
         """
-        return self.weird_separator + self.text + self.weird_separator + " ".join(self.changed_words)
+        return self.weird_separator + self.text + self.weird_separator + " ".join(sorted(self.changed_words))
 
     def get_weird_text(self) -> str:
         """Encodes provided text."""
