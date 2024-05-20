@@ -12,7 +12,7 @@ app.add_middleware(
     CORSMiddleware,
     allow_origins=[
         "http://localhost:5173",
-        "https://weird-text-frontend-939ba918f5ec.herokuapp.com/",
+        "https://dapper-cascaron-d5945c.netlify.app/",
     ],
     allow_credentials=True,
     allow_methods=["*"],
